@@ -1,8 +1,15 @@
 import React from 'react';
+import * as s from './style';
 
 const Login = () => {
     return (
-        <p>asd</p>
+        <s.CenterContent>
+             <s.LoginContainer>
+                 <s.TitleContainer>
+                     <p>Login</p>
+                 </s.TitleContainer>
+            </s.LoginContainer>
+        </s.CenterContent>
     );
 };
 
