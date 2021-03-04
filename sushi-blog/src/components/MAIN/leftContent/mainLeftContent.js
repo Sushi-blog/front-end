@@ -18,7 +18,21 @@ const LeftCotent = () => {
                     </div>
                     <s.WritePostBtn>게시물 작성</s.WritePostBtn>
                     <s.FixContainer>
-                        <s.CategoryFix>카테고리 수정</s.CategoryFix>
+                        <s.FixFont
+                            onClick={()=>{
+                                window.location.href = "/fix/category"
+                            }}
+                        >카테고리 수정</s.FixFont>
+                        <s.FixFont
+                            onClick={() => {
+                                window.location.href = "/fix/nickname"
+                            }}
+                        >닉네임 수정</s.FixFont>
+                        <s.FixFont 
+                            onClick={()=> {
+                                window.location.href = "/withdrawal"
+                            }}
+                        >회원탈퇴</s.FixFont>
                     </s.FixContainer>
                 </s.ContentCenter>
             </s.MainCotainer>

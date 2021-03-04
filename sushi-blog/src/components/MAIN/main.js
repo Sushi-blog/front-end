@@ -1,6 +1,7 @@
 import React from 'react';
 import * as s from './styles';
 import LeftCotent from './leftContent/mainLeftContent';
+import MainRightContent from './rightContent/mainRightContent'
 
 
 const MainPage = () => {
@@ -8,6 +9,7 @@ const MainPage = () => {
         <>
             <s.MainCotainer>
                 <LeftCotent></LeftCotent>
+                <MainRightContent></MainRightContent>
             </s.MainCotainer>
         </>
     );

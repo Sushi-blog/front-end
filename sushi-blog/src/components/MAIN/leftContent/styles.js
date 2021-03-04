@@ -63,9 +63,10 @@ export const WritePostBtn = styled.button`
 export const FixContainer = styled.div`
     font-size: 20px;
     text-decoration: underline;
+    margin-top: 48px;
 `
 
-export const CategoryFix = styled.p`
+export const FixFont = styled.p`
     cursor: pointer;
-    
+    margin-bottom: 20px;
 `
