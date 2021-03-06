@@ -50,7 +50,7 @@ export const CategoryMenuFont = styled.p`
     margin: 0;
     margin-top: 35px;
 `
-
+ 
 export const WritePostBtn = styled.button`
     font-size: 25px;
     padding: 30px 80px;
