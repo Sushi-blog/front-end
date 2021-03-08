@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { fontColor, baseColor } from '../../../style/index';
+import { fontColor, baseColor } from '../../../../style/index';
 
 export const WhiteBox = styled.div`
     z-index: 1;
