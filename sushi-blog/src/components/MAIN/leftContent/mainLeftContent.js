@@ -1,19 +1,27 @@
 import React, { useState } from 'react';
 import * as s from './styles';
-import CategoryFix from '../modals/categoryFix';
+import CategoryFix from '../modals/categoryFix/categoryFix';
+import NicknameFix from '../modals/nicknameFix/nicknameFix';
 
 const LeftCotent = () => {
     const [categoryFixModal, setCategoryFixModal] = useState(false);
+    const [nicknameFixModal, setNicknameFixModal] = useState(false);
 
     const ViewCategoryFixModal = () => {
         setCategoryFixModal(true);
         return;
-    }
+    };
+
+    const ViewNicknameFixModal = () => {
+        setNicknameFixModal(true);
+        return;
+    };
 
     return(
         <>
             <s.MainCotainer>
                 {categoryFixModal ?<CategoryFix setCategoryFixModal={setCategoryFixModal}></CategoryFix>: null}
+                {nicknameFixModal ? <NicknameFix setNicknameFixModal={setNicknameFixModal}></NicknameFix>: null}
                 <s.ContentCenter>
                     <s.UserName>최강승윤<s.HeaderFont>의 블로그</s.HeaderFont></s.UserName>
                     <s.EmailFont>201413lsy@dsm.hs.kr</s.EmailFont>
@@ -32,11 +40,7 @@ const LeftCotent = () => {
                     >게시물 작성</s.WritePostBtn>
                     <s.FixContainer>
                         <s.FixFont onClick={ViewCategoryFixModal}>카테고리 수정</s.FixFont>
-                        <s.FixFont
-                            onClick={() => {
-                                window.location.href = "/fix/nickname"
-                            }}
-                        >닉네임 수정</s.FixFont>
+                        <s.FixFont onClick={ViewNicknameFixModal}>닉네임 수정</s.FixFont>
                         <s.FixFont 
                             onClick={()=> {
                                 window.location.href = "/withdrawal"
