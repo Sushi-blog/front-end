@@ -52,6 +52,21 @@ export const NicknameInput = styled.input`
     height: 60px;
     font-size: 25px;
     position:relative;
+    display: block;
     left: 50%;
     transform: translateX(-50%);
+    background-color: ${baseColor};
+    border: none;
+`
+
+export const NicknameFixBtn = styled.button`
+    width: 200px;
+    height: 40px;
+    font-size: 25px;
+    margin-top: 55px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: ${baseColor};
+    border: none;
 `

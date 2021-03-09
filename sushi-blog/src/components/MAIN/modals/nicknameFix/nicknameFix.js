@@ -14,6 +14,7 @@ const NicknameFix = (props) => {
                     <s.TitleFont>닉네임 수정</s.TitleFont>
                 </s.NicknameTitle>
                 <s.NicknameInput></s.NicknameInput>
+                <s.NicknameFixBtn>수정하기</s.NicknameFixBtn>
             </s.MainContainer>
         </>
     );
