@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import * as s from './styles';
 import CategoryFix from '../modals/categoryFix/categoryFix';
 import NicknameFix from '../modals/nicknameFix/nicknameFix';
+import WithdrawalModal from '../modals/withdrawal/withdrawal';
 
 const LeftCotent = () => {
     const [categoryFixModal, setCategoryFixModal] = useState(false);
@@ -18,8 +19,8 @@ const LeftCotent = () => {
         return;
     };
 
-    const WithdrawalModal = () => {
-        
+    const ViewWithdrawalModal = () => {
+        setWithdrawalModal(true);
         return;
     };
 
@@ -28,7 +29,7 @@ const LeftCotent = () => {
             <s.MainCotainer>
                 {categoryFixModal ?<CategoryFix setCategoryFixModal={setCategoryFixModal}></CategoryFix>: null}
                 {nicknameFixModal ? <NicknameFix setNicknameFixModal={setNicknameFixModal}></NicknameFix>: null}
-                {/* {withdrawalModal?} */}
+                {withdrawalModal ? <WithdrawalModal setWithdrawalModal={setWithdrawalModal}></WithdrawalModal>: null}
                 <s.ContentCenter>
                     <s.UserName>최강승윤<s.HeaderFont>의 블로그</s.HeaderFont></s.UserName>
                     <s.EmailFont>201413lsy@dsm.hs.kr</s.EmailFont>
@@ -48,7 +49,7 @@ const LeftCotent = () => {
                     <s.FixContainer>
                         <s.FixFont onClick={ViewCategoryFixModal}>카테고리 수정</s.FixFont>
                         <s.FixFont onClick={ViewNicknameFixModal}>닉네임 수정</s.FixFont>
-                        <s.FixFont onClick={WithdrawalModal}>회원탈퇴</s.FixFont>
+                        <s.FixFont onClick={ViewWithdrawalModal}>회원탈퇴</s.FixFont>
                     </s.FixContainer>
                 </s.ContentCenter>
             </s.MainCotainer>
