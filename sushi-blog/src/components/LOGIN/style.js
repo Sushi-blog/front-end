@@ -10,7 +10,11 @@ export const LoginContainer = styled.div`
         top:50%;
         transform: translateY(-50%);
         width: 880px;
+<<<<<<< HEAD
         height: 750px;
+=======
+        height: 830px;
+>>>>>>> main
         background-color: #FFDDB5;
 `
 
@@ -20,6 +24,7 @@ export const TitleContainer = styled.div`
     width: 550px;
     height: 85px;
     border-bottom: 1px solid;
+<<<<<<< HEAD
     margin: auto;
 `
 
@@ -55,4 +60,6 @@ export const SignUp = styled.p`
     cursor: pointer;
     margin-top: 30px;
     text-align: center;
+=======
+>>>>>>> main
 `
