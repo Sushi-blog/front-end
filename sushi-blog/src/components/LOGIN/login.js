@@ -5,7 +5,6 @@ const Login = () => {
     return (
         <s.CenterContent>
              <s.LoginContainer>
-<<<<<<< HEAD
                 <s.TitleContainer>
                     <p>Login</p>
                 </s.TitleContainer>
@@ -15,11 +14,6 @@ const Login = () => {
                 <s.SignUp onClick={()=>{
                     window.location.href="/signup"
                 }}>회원가입을 하시겠습니까?</s.SignUp>
-=======
-                 <s.TitleContainer>
-                     <p>Login</p>
-                 </s.TitleContainer>
->>>>>>> main
             </s.LoginContainer>
         </s.CenterContent>
     );
