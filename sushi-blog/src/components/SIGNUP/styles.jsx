@@ -33,6 +33,7 @@ export const SignupInput = styled.input`
     transform: translateX(-50%);
     font-size: 25px;
     padding-left: 20px;
+    border: none;
 `
 
 export const CheckBtn = styled.button`
@@ -48,3 +49,4 @@ export const CheckBtn = styled.button`
     left: 50%;
     transform:translateX(-50%);
 `
+

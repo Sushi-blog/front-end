@@ -46,6 +46,7 @@ export const CheckBtn = styled.button`
     position:relative;
     left: 50%;
     transform:translateX(-50%);
+    border: none;
 `
 
 export const SignUp = styled.p`
