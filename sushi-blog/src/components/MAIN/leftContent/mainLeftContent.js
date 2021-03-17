@@ -31,7 +31,7 @@ const LeftCotent = () => {
                 {nicknameFixModal ? <NicknameFix setNicknameFixModal={setNicknameFixModal}></NicknameFix>: null}
                 {withdrawalModal ? <WithdrawalModal setWithdrawalModal={setWithdrawalModal}></WithdrawalModal>: null}
                 <s.ContentCenter>
-                    <s.UserName>최강승윤<s.HeaderFont>의 블로그</s.HeaderFont></s.UserName>
+                    <s.UserName>김지민님<s.HeaderFont>의 블로그</s.HeaderFont></s.UserName>
                     <s.EmailFont>201413lsy@dsm.hs.kr</s.EmailFont>
                     <s.CategoryFont>카테고리</s.CategoryFont>
                     <s.CategoryAllfont>전체</s.CategoryAllfont>
