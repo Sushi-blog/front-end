@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { fontColor, baseColor } from '../../../../style/index';
+import { baseColor, modalColor2 } from '../../../../style/index';
 
 export const WhiteBox = styled.div`
     z-index: 1;
@@ -19,32 +19,35 @@ export const MainContainer = styled.div`
     height: 260px;
     margin-left: -400px;
     margin-top: -130px;
-    background-color: #FFDFB9;
+    background-color: ${modalColor2};
     z-index:1;
     display: flex;
     justify-content: center;
+    
 `
 
 export const Title = styled.div`
+    position: relative;
     margin-top: 55px;
     text-align: center;
     width: 480px;
     height: 50px;
+    padding-bottom: 19px;
     border-bottom: 1px solid;
-    color: ${fontColor};
 `
 
 export const TitleFont = styled.p`
     margin: 0;
     font-size: 30px;
-    color: ${fontColor};
 ` 
 
 export const WithdrawalBtn = styled.button`
+    position: relative;
     width: 200px;
     height: 50px;
-    font-size: 25px;
-    margin-top: 55px;
+    font-size: 30px;
+    line-height: 30px;
+    margin-top: 60px;
     background-color: ${baseColor};
     border: none;
 `
