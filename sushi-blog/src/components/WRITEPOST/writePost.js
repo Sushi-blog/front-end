@@ -43,7 +43,7 @@ const WritePost = () => {
                     </s.WritePostContainer>
                 </s.CenterContainer>
                 <s.BackPageBtn onClick={()=>{
-                    window.location.href="/";
+                    window.location.href="/mainpage";
                 }}>돌아가기</s.BackPageBtn>
             </div>
         </>

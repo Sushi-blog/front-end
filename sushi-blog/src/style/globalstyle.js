@@ -2,7 +2,8 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
     body{
-        background: #F5EFEF;
+        font-family: "NanumGothic";
+        background: #F4F4F4;
     }
     a{
         text-decoration: none;

@@ -6,22 +6,22 @@ export const CenterContent = styled.div`
 `
 
 export const SignupContainer = styled.div`
-        position: absolute;
-        top:50%;
-        transform: translateY(-50%);
-        width: 880px;
-        height: 800px;
-        background-color: #FFDDB5;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    width: 880px;
+    height: 800px;
+    background-color: #FFDDB5;
 `
 
-export const TitleContainer = styled.div`
-    margin-top: 20px;
+export const TitleContainer = styled.p`
     text-align: center;
     font-size: 50px;
     width: 550px;
     height: 85px;
     border-bottom: 1px solid;
     margin: auto;
+    margin-top: 25px;
 `
 
 export const SignupInput = styled.input`
@@ -34,6 +34,7 @@ export const SignupInput = styled.input`
     font-size: 25px;
     padding-left: 20px;
     border: none;
+    border-radius: 10px;
 `
 
 export const CheckBtn = styled.button`
@@ -48,5 +49,6 @@ export const CheckBtn = styled.button`
     position:relative;
     left: 50%;
     transform:translateX(-50%);
+    border-radius: 5px;
 `
 

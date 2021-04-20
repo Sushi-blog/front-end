@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { baseColor, loginColor } from '../../style/index';
 
 export const CenterContent = styled.div`
     display:flex;
@@ -6,53 +7,62 @@ export const CenterContent = styled.div`
 `
 
 export const LoginContainer = styled.div`
-        position: absolute;
-        top:50%;
-        transform: translateY(-50%);
-        width: 880px;
-        height: 750px;
-        background-color: #FFDDB5;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    width: 700px;
+    height: 625px;
+    background-color: ${loginColor};
+    border-radius: 10px;
 `
 
 export const TitleContainer = styled.div`
     text-align: center;
-    font-size: 50px;
-    width: 550px;
-    height: 85px;
+    font-size: 60px;
+
+    p{
+        margin: 0;
+    }
+    width: 435px;
+    padding-bottom: 20px;
     border-bottom: 1px solid;
     margin: auto;
+    margin-top: 40px;
+    font-weight: bold;
 `
 
 export const LoginInput = styled.input`
-    width: 720px;
-    height: 85px;
-    margin-top: 70px;
+    width: 580px;
+    height: 80px;
+    margin-top: 50px;
     position: relative;
     left:50%;
     transform: translateX(-50%);
     font-size: 25px;
     padding-left: 20px;
+    border: none;
+    border-radius: 10px;
 `
 
 export const CheckBtn = styled.button`
-    width: 200px;
-    height: 80px;
-    background-color: #8E5454;
+    width: 150px;
+    height: 70px;
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
     font-size: 30px;
     font-weight: bold;
     border: none;
-    margin-top: 60px;
+    margin-top: 50px;
     position:relative;
     left: 50%;
     transform:translateX(-50%);
     border: none;
+    border-radius: 5px;
 `
 
 export const SignUp = styled.p`
-    color: #A63B3B;
     font-size: 20px;
-    text-decoration: underline solid #A63B3B;
+    text-decoration: underline solid;
     cursor: pointer;
     margin-top: 30px;
     text-align: center;
