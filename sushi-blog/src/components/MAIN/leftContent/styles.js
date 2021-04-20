@@ -1,27 +1,29 @@
 import styled from 'styled-components';
 
 export const MainCotainer = styled.div`
-    width: 50vh;
+    width: 380px;
     height: 200px;
+    margin-left: 100px;
 `
 
 export const ContentCenter = styled.div`
     text-align:center;
+    margin-top: 60px;
 `
 
 export const UserName = styled.span`
-    font-size: 40px;
+    font-size: 60px;
     font-weight: bold;
 `
 
 export const HeaderFont = styled.span`
-    font-size: 30px;
+    font-size: 40px;
     font-weight:bold;
 `
 
 export const EmailFont = styled.p`
     margin: 0;
-    font-size:20px;
+    font-size:30px;
     margin-top:28px;
     margin-bottom: 49px;
 `
@@ -33,7 +35,7 @@ export const CategoryFont = styled.div`
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 30px;
+    font-size: 40px;
     font-weight: bold;
     padding-bottom: 28px;
     border-bottom: 1px solid;
@@ -41,7 +43,7 @@ export const CategoryFont = styled.div`
 `
 
 export const CategoryAllfont = styled.p`
-    font-size: 25px;
+    font-size: 30px;
     font-weight: bold;
 `
 
@@ -53,10 +55,12 @@ export const CategoryMenuFont = styled.p`
  
 export const WritePostBtn = styled.button`
     font-size: 25px;
-    padding: 30px 80px;
+    width: 300px;
+    height: 100px;
     margin: 0;
-    margin-top: 65px;
-    background-color: #F6E5D2;
+    padding: 0;
+    margin-top: 55px;
+    background-color: rgba(0, 0, 0, 0.3);
     border: none;
 `
 

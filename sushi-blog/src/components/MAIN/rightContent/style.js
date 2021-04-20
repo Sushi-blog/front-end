@@ -1,11 +1,11 @@
 import styled from 'styled-components';
-import {fontColor} from '../../../style/index';
 
 export const MainContainer = styled.div`
     margin-top: 23px;
-    background-color: #F6E5D2;
-    width: 145vh;
+    background-color: rgba(163, 158, 152, 0.16);
+    width: 1300px;
     height: 870px;
+    margin-left: 50px;
 `
 
 export const ExplanaitionDiv = styled.div`
@@ -15,14 +15,14 @@ export const ExplanaitionDiv = styled.div`
     font-weight: bold;
     p{
         margin: 0;
-        margin-top: 30px;
-        color:${fontColor};
+        margin-top: 65px;
+        color: #000000;
     }
 `
 
 export const PostContainer= styled.div`
     cursor: pointer;
-    margin-top: 40px;
+    margin-top: 33px;
     width: 100%;
     font-size: 25px;
     text-align: center;

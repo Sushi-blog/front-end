@@ -32,7 +32,7 @@ const MainRightContent = () => {
                 </s.PostContainer>
                 <s.PageList>
                     <s.PageNumber>&lt;</s.PageNumber>
-                    <s.PageNumber>1</s.PageNumber>
+                    <s.PageNumber><b>1</b></s.PageNumber>
                     <s.PageNumber>2</s.PageNumber>
                     <s.PageNumber>3</s.PageNumber>
                     <s.PageNumber>4</s.PageNumber>
