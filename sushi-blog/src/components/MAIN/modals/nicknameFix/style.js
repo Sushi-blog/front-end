@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { fontColor, baseColor } from '../../../../style/index';
+import { fontColor, baseColor, modalColor, modalColor2 } from '../../../../style/index';
 
 export const WhiteBox = styled.div`
     z-index: 1;
@@ -19,37 +19,30 @@ export const MainContainer = styled.div`
     height: 350px;
     margin-left: -400px;
     margin-top: -175px;
-    background-color: #FFDFB9;
+    background-color: ${modalColor};
     z-index:1;
 `
 
 export const TitleFont = styled.p`
     margin: 0;
     font-size: 30px;
-    color: ${fontColor};
-`
-
-export const Font = styled.p`
-    width: 200px;
-    margin: 0;
-    font-size: 30px;
-    color: ${fontColor};
-    float:left;
+    font-weight: bold;
+    color: white;
 `
 
 export const NicknameTitle = styled.div`
-    width: 405px;
-    height:60px;
+    width: 350px;
+    height: 50px;
     margin: auto;
-    margin-top: 35px;
+    margin-top: 32px;
     text-align: center;
     border-bottom: 1px solid;
 `
 
 export const NicknameInput = styled.input`
-    margin-top: 45px;
+    margin-top: 50px;
     width: 350px;
-    height: 60px;
+    height: 50px;
     font-size: 25px;
     position:relative;
     display: block;
@@ -57,16 +50,18 @@ export const NicknameInput = styled.input`
     transform: translateX(-50%);
     background-color: ${baseColor};
     border: none;
+    border-radius: 5px;
 `
 
 export const NicknameFixBtn = styled.button`
     width: 200px;
-    height: 40px;
+    height: 50px;
     font-size: 25px;
-    margin-top: 55px;
+    margin-top: 90px;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    background-color: ${baseColor};
+    background-color: ${modalColor2};
+    border-radius: 10px;
     border: none;
 `

@@ -33,9 +33,9 @@ const LeftCotent = () => {
                 <s.ContentCenter>
                     <s.UserName onClick={ViewNicknameFixModal}>김지민<s.HeaderFont>의 블로그</s.HeaderFont></s.UserName>
                     <s.EmailFont>201413lsy@dsm.hs.kr</s.EmailFont>
-                    <s.CategoryFont>카테고리</s.CategoryFont>
+                    <s.CategoryFont onClick={ViewCategoryFixModal}>카테고리</s.CategoryFont>
                     <s.CategoryAllfont>전체</s.CategoryAllfont>
-                    <div onClick={ViewCategoryFixModal}>
+                    <div >
                         <s.CategoryMenuFont>카테고리1</s.CategoryMenuFont>
                         <s.CategoryMenuFont>카테고리2</s.CategoryMenuFont>
                         <s.CategoryMenuFont>카테고리3</s.CategoryMenuFont>
