@@ -24,7 +24,7 @@ export const PostContainer= styled.div`
     cursor: pointer;
     margin-top: 33px;
     width: 100%;
-    font-size: 25px;
+    font-size: 30px;
     text-align: center;
     display: flex;
     justify-content: space-evenly;

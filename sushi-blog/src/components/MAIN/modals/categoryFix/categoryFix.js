@@ -12,7 +12,7 @@ const CategoryFix = (props) => {
             <s.CategoryFixContainer>
                     <s.Font>{'카테고리' + (i+1)}</s.Font>
                     <s.CategoryInput></s.CategoryInput>
-                    <s.FixBtn>수정</s.FixBtn>
+                    <s.FixBtn>저장</s.FixBtn>
             </s.CategoryFixContainer>
         );
     }
@@ -30,7 +30,6 @@ const CategoryFix = (props) => {
                         return CreateCategoryFix(index);
                     })}
                 </div>
-                
             </s.MainContainer>
         </>
     );

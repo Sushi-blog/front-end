@@ -14,6 +14,7 @@ export const ContentCenter = styled.div`
 export const UserName = styled.span`
     font-size: 60px;
     font-weight: bold;
+    cursor: pointer;
 `
 
 export const HeaderFont = styled.span`

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { fontColor, baseColor } from '../../../../style/index';
+import { baseColor, modalColor, modalColor2 } from '../../../../style/index';
 
 export const WhiteBox = styled.div`
     z-index: 1;
@@ -15,58 +15,66 @@ export const MainContainer = styled.div`
     position: fixed;
     top: 50%;
     left: 50%;
-    width:1000px;
-    height: 600px;
+    width: 870px;
+    height: 520px;
     margin-left: -500px;
     margin-top: -300px;
-    background-color: #FFDFB9;
+    background-color: ${modalColor};
     z-index:1;
 `
 
 export const TitleFont = styled.p`
     margin: 0;
-    font-size: 30px;
-    color: ${fontColor};
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
 `
 
 export const Font = styled.p`
-    width: 200px;
+    width: 340px;
+    background-color: ${baseColor};
     margin: 0;
+    padding-top: 17px;
+    padding-bottom: 17px;
     font-size: 30px;
-    color: ${fontColor};
+    text-align: center;
     float:left;
 `
 
 export const CategoryTitle = styled.div`
     width: 405px;
-    height:60px;
     margin: auto;
-    margin-top: 55px;
+    margin-top: 45px;
     text-align: center;
-    border-bottom: 1px solid;
 `
 
 export const CategoryFixContainer = styled.div`
-    margin-top: 55px;
-    margin-left: 127px;
+    margin-left: 52px;
     display: flex;
     align-items: center;
+    &:nth-child(1) {
+        margin-top: 40px;
+    }
+    margin-top: 24px;
 `
 
 export const CategoryInput = styled.input`
-    width:450px;
-    height: 40px;
-    margin-left: 10px;
+    width: 340px;
+    height: 69px;
+    margin-left: 25px;
     background-color: ${baseColor};
     border: none;
-    font-size: 25px;
+    font-size: 30px;
+    text-align: center;
     padding: 0;
 `
 
 export const FixBtn = styled.button`
-    margin-left: 25px;
-    width: 55px;
-    height:40px;
+    margin-left: 13px;
+    font-size: 18px;
+    width: 70px;
+    height:45px;
     border: none;
-    background-color: ${baseColor};
+    border-radius: 20px;
+    background-color: ${modalColor2};
 `
