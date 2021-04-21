@@ -63,6 +63,10 @@ export const WritePostBtn = styled.button`
     margin-top: 55px;
     background-color: rgba(0, 0, 0, 0.3);
     border: none;
+    
+    :hover{
+        background-color: rgba(0, 0, 0, 0.5);
+    }
 `
 
 export const FixContainer = styled.div`

@@ -1,11 +1,11 @@
 import styled from 'styled-components';
-import {baseColor} from '../../style/index';
+import {baseColor, modalColor2} from '../../style/index';
 
 export const Title = styled.p`
     text-align:center;
-    font-size: 50px;
+    font-size: 60px;
     font-weight: bold;
-    margin-top: 40px;
+    margin-top: 70px;
     margin-bottom: 0;
 `
 
@@ -18,7 +18,7 @@ export const CenterContainer = styled.div`
 export const WritePostContainer = styled.div`
     width: 1400px;
     height: 600px;
-    background-color: #FFDDB5;
+    background-color: ${modalColor2};
 `
 
 export const WriteHeader = styled.div`
@@ -64,10 +64,14 @@ export const ContentContainer = styled.textarea`
 `
 
 export const WriteFooter = styled.div`
+    width: 1242px;
     margin-top: 40px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    position: relative;
+    left: 50%;
+    transform:  translateX(-50%);
     .input{
         width: 730px;
         height: 35px;
@@ -91,19 +95,20 @@ export const WriteBtn = styled.button`
     background-color: ${baseColor};
     border: none;
     outline: none;
+    border-radius: 10px;
 `
 
 export const BackPageBtn = styled.button`
     width: 180px;
     height: 60px;
-    background: #FFDDB5;
+    background: #A9A9A9;
     font-size: 25px;
     border:none;
     outline: none;
     margin-left: 100px;
-    margin-top: 60px;
+    margin-top: 40px;
 
     :hover{
-        background: #FDB968;
+        background: #696969;
     }
 `

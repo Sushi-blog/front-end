@@ -1,35 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import * as s from './style';
+import PostDetail from '../modals/postDetail/postDetail';
+import PostContainer from './postContainer/PostContainer';
 
 const MainRightContent = () => {
+    const [postDetail, setPostDetail] = useState(false);
+
     return (
         <>
+            {postDetail ? <PostDetail setPostDetail={postDetail}></PostDetail> : null}
             <s.MainContainer>
                 <s.ExplanaitionDiv>
                     <p>카테고리</p>
                     <p>제목</p>
                     <p>작성일</p>
                 </s.ExplanaitionDiv>
-                <s.PostContainer>
-                    <s.Category>[카테고리1]</s.Category>
-                    <s.Title>이승윤 오늘은 디자인을 하다</s.Title>
-                    <s.CreateDate>2021-02-23</s.CreateDate>
-                </s.PostContainer>
-                <s.PostContainer>
-                    <s.Category>[카테고리1]</s.Category>
-                    <s.Title>이승윤 오늘은 디자인을 하다</s.Title>
-                    <s.CreateDate>2021-02-23</s.CreateDate>
-                </s.PostContainer>
-                <s.PostContainer>
-                    <s.Category>[카테고리1]</s.Category>
-                    <s.Title>이승윤 오늘은 디자인을 하다</s.Title>
-                    <s.CreateDate>2021-02-23</s.CreateDate>
-                </s.PostContainer>
-                <s.PostContainer>
-                    <s.Category>[카테고리1]</s.Category>
-                    <s.Title>이승윤 오늘은 디자인을 하다</s.Title>
-                    <s.CreateDate>2021-02-23</s.CreateDate>
-                </s.PostContainer>
+                {[...Array(5)].map((v, index) => {
+                    return(
+                        <PostContainer></PostContainer>
+                    )
+                })}
                 <s.PageList>
                     <s.PageNumber>&lt;</s.PageNumber>
                     <s.PageNumber><b>1</b></s.PageNumber>
