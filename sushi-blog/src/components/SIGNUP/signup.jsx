@@ -6,8 +6,13 @@ const SignUp = memo(() => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [checkPassword, setCheckPassword] = useState('');
+    const blank_pattern = /^\s+|\s+$/g;
+    const special_pattern = /[`~!@#$%^&*|\\\'\";:\/?]/gi;
 
     const onChnageNickname = (e) => {
+        if(nickname.length > 10) {
+            return;
+        }
         setNickname(e.target.value);
     };
 
@@ -24,14 +29,20 @@ const SignUp = memo(() => {
     }
 
     const onClickSignup = (e) => {
-        if(password.length < 8) {
-            alert("비밀번호를 8자리 이상 써주세요");
+        console.log(nickname.match(blank_pattern));
+        if(blank_pattern.test(nickname) || special_pattern.test(nickname)) {
+            alert("특수문자나 공백이 들어있음.");
             return;
         }
-        if(password !== checkPassword) {
-            alert("비밀번호를 다시 확인해주세요");
-            return;
-        }
+
+        // if(password.length < 8) {
+        //     alert("비밀번호를 8자리 이상 써주세요");
+        //     return;
+        // }
+        // if(password !== checkPassword) {
+        //     alert("비밀번호를 다시 확인해주세요");
+        //     return;
+        // }
     }
 
     return (
