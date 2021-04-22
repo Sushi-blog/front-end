@@ -8,7 +8,7 @@ const MainRightContent = () => {
 
     return (
         <>
-            {postDetail ? <PostDetail setPostDetail={postDetail}></PostDetail> : null}
+            {postDetail ? <PostDetail setPostDetail={setPostDetail}></PostDetail> : null}
             <s.MainContainer>
                 <s.ExplanaitionDiv>
                     <p>카테고리</p>
@@ -17,7 +17,7 @@ const MainRightContent = () => {
                 </s.ExplanaitionDiv>
                 {[...Array(5)].map((v, index) => {
                     return(
-                        <PostContainer></PostContainer>
+                        <PostContainer setPostDetail={setPostDetail} key={index}></PostContainer>
                     )
                 })}
                 <s.PageList>

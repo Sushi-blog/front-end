@@ -5,7 +5,7 @@ const PostContainer = memo((props) => {
 
 
   const onClickPost = () => {
-    console.log(props.setPostDetail);
+      props.setPostDetail(true);
   };
 
   return (
