@@ -12,22 +12,39 @@ export const WhiteBox = styled.div`
 `
 
 export const MainContainer = styled.div`
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    width:1300px;
-    height: 700px;
-    transform: translate(-50%, -50%);
-    background-color: ${modalColor2};
-    z-index:1;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width:1300px;
+  height: 700px;
+  transform: translate(-50%, -50%);
+  background-color: ${modalColor2};
+  z-index:1;
 
-    .title {
-      margin: 0;
-      font-size: 35px;
-      font-weight: bold;
-      text-align: center;
-      margin-top: 50px;
-    }
+  div{
+    display: flex;
+    align-items: center;
+  }
+
+  img{
+    position: absolute;
+    top: 10%;
+    right: 10%;
+  }
+
+  .pen {
+    margin-right: 50px;
+    width: 23px;
+    height: 23px;
+  }
+
+  .title {
+    margin: 0;
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 50px;
+  }
 `
 
 export const Header = styled.div`
@@ -87,6 +104,9 @@ export const Content = styled.div`
   font-size: 25px;
   padding-top :40px;
   padding-left: 50px;
+  padding-bottom: 40px;
   padding-right: 50px;
   border-radius: 10px;
+  overflow-y: scroll;
 `
+
