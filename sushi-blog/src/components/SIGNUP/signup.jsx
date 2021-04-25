@@ -29,20 +29,24 @@ const SignUp = memo(() => {
     }
 
     const onClickSignup = (e) => {
-        console.log(nickname.match(blank_pattern));
-        if(blank_pattern.test(nickname) || special_pattern.test(nickname)) {
-            alert("특수문자나 공백이 들어있음.");
+        if(special_pattern.test(nickname)) {
+            alert("특수문자를 지워주세요.");
             return;
         }
-
-        // if(password.length < 8) {
-        //     alert("비밀번호를 8자리 이상 써주세요");
-        //     return;
-        // }
-        // if(password !== checkPassword) {
-        //     alert("비밀번호를 다시 확인해주세요");
-        //     return;
-        // }
+        for(let i =0; i < nickname.length; i++) {
+            if(nickname[i] == ' ') {
+                alert("공백이 들어있음");
+                return;
+            }
+        }
+        if(password.length < 8) {
+            alert("비밀번호를 8자리 이상 써주세요");
+            return;
+        }
+        if(password !== checkPassword) {
+            alert("비밀번호를 다시 확인해주세요");
+            return;
+        }
     }
 
     return (
