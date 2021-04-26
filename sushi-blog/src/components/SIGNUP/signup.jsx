@@ -6,8 +6,8 @@ const SignUp = memo(() => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [checkPassword, setCheckPassword] = useState('');
-    const blank_pattern = /^\s+|\s+$/g;
     const special_pattern = /[`~!@#$%^&*|\\\'\";:\/?]/gi;
+    const [nicknameCol, setNicknameCol] = useState('#FFFFFF');
 
     const onChnageNickname = (e) => {
         if(nickname.length > 10) {
@@ -28,24 +28,35 @@ const SignUp = memo(() => {
         setCheckPassword(e.target.value);
     }
 
-    const onClickSignup = (e) => {
+    const checkNickname = () => {
+        console.log(nickname);
         if(special_pattern.test(nickname)) {
-            alert("특수문자를 지워주세요.");
-            return;
+            return false;
         }
-        for(let i =0; i < nickname.length; i++) {
+        for(let i = 0; i < nickname.length; i++) {
             if(nickname[i] == ' ') {
-                alert("공백이 들어있음");
-                return;
+                return false
             }
         }
-        if(password.length < 8) {
-            alert("비밀번호를 8자리 이상 써주세요");
-            return;
+        return true;
+    }
+
+    const checkPass = () => {
+        if(!(password.length < 8 || password.length > 16)) {
+            return false;
         }
         if(password !== checkPassword) {
-            alert("비밀번호를 다시 확인해주세요");
+            return false;
+        }
+    }
+
+    const onClickSignup = (e) => {
+        if(!checkNickname()) {
+            setNicknameCol('rgba(0, 0, 0, 0.3)');
             return;
+        }
+        else{
+            setNicknameCol('#FFFFFF');
         }
     }
 
@@ -54,7 +65,12 @@ const SignUp = memo(() => {
             <s.CenterContent>
                 <s.SignupContainer>
                     <s.TitleContainer>SIGN UP</s.TitleContainer>
-                    <s.SignupInput placeholder="닉네임을 입력해주세요(10자 이내)" onChange={onChnageNickname} maxLength="10"></s.SignupInput>
+                    <s.SignupInput
+                        style={{backgroundColor: nicknameCol}}
+                        placeholder="닉네임을 입력해주세요(10자 이내)"
+                        onChange={onChnageNickname}
+                        maxLength="10"
+                    ></s.SignupInput>
                     <s.SignupInput placeholder="이메일을 입력하세요" onChange={onChangeEmail}></s.SignupInput>
                     <s.SignupInput placeholder="비밀번호를 입력하세요(영문, 숫자 사용 필수)" maxLength='16' onChange={onChangePassword}></s.SignupInput>
                     <s.SignupInput placeholder="비밀번호를 확인하세요" onChange={onChangeCheckPassword} maxLength='16'></s.SignupInput>
