@@ -9,6 +9,10 @@ const Login = () => {
         setEmail(e.target.value);
     }
 
+    const onChangePassword = (e) => {
+        setPassword(e.target.value);
+    }
+
     return (
         <s.CenterContent>
              <s.LoginContainer>
@@ -18,8 +22,13 @@ const Login = () => {
                 <s.LoginInput 
                     placeholder="이메일을 입력히세요"
                     onChange={onChangeEmail}
+                    value={email}
                 ></s.LoginInput>
-                <s.LoginInput placeholder="비밀번호를 입력하세요"></s.LoginInput>
+                <s.LoginInput 
+                    placeholder="비밀번호를 입력하세요"
+                    onChange={onChangePassword}
+                    value = {password}
+                ></s.LoginInput>
                 <s.CheckBtn>확인</s.CheckBtn>
                 <s.SignUp onClick={()=>{
                     window.location.href="/signup"
