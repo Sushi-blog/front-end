@@ -1,9 +1,11 @@
 import axios from 'axios';
 
-exports const Request = (method, url, head, data) => {
-    return({
+const baseURL = 'http://52.231.8.161:8081/sushi';
+
+export const Request = (method, url, head, data) => {
+    return axios({
         method: method,
-        url: 'asd' + url,
+        url: baseURL + url,
         headers: head,
         data: data,
     }).then((e)=>{

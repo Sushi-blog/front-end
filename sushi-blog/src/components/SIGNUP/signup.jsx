@@ -1,5 +1,6 @@
 import React, {useState, memo} from 'react';
 import * as s from './styles';
+import { Request } from '../axios';
 
 const SignUp = memo(() => {
     const [nickname, setNickname] = useState('');
@@ -7,11 +8,14 @@ const SignUp = memo(() => {
     const [password, setPassword] = useState('');
     const [checkPassword, setCheckPassword] = useState('');
     const [nicknameCol, setNicknameCol] = useState('#FFFFFF');
+    const [emailCol, setEmailCol] = useState('#FFFFFF');
     const [passColor, setPassColor] = useState('#FFFFFF');
 
     const special_pattern = /[`~!@#$%^&*|\\\'\";:\/?]/gi;
     const korea_pattern = /[\ㄱ-ㅎㅏ-ㅣ가-힣]/g;
     const num_pattern = /[0-9]/g;
+    const eng_pattern = /[a-zA-Z]/g;
+    const email_pattern = /[a-zA-Z0-9]+@[a-zA-Z0-9]/gi;
 
     const onChnageNickname = (e) => {
         if(nickname.length > 10) {
@@ -70,15 +74,31 @@ const SignUp = memo(() => {
             return false;
         }
         if(!num_pattern.test(password)) {
-            console.log(password);
-            console.log(num_pattern.test(password))
             alert("숫자를 1자 이상 넣어주세요.");
+            return false;
+        }
+        if(!eng_pattern.test(password)) {
+            alert("영어를 1자 이상 넣어주세요.");
             return false;
         }
         return true;
     }
 
-    const onClickSignup = (e) => {
+    const checkEmail = () => {
+        if(email_pattern.test(email) === false ){
+            console.log(email_pattern.test(email));
+            console.log(email);
+            alert("이메일 형식이 올바르지 않습니다.");
+            return false;
+        }
+        if(email == '') {
+            alert("이메일을 입력해주세요");
+            return false;
+        }
+        return true;
+    }
+
+    const onClickSignup = async(e) => {
         if(!checkNickname()) {
             setNicknameCol('rgba(0, 0, 0, 0.3)');
             return;
@@ -89,10 +109,25 @@ const SignUp = memo(() => {
         
         if(!checkPass()) {
             setPassColor('rgba(0, 0, 0, 0.3)');
+            return;
         }
         else {
             setPassColor('#FFFFFF');
         }
+
+        if(!checkEmail()) {
+            setEmailCol('rgba(0, 0, 0, 0.3)');
+            return;
+        }
+        else{
+            setEmailCol('#FFFFFF');
+        }
+        const test = await Request('post', '/account', null, {
+            "email": email,
+	        "password": password,
+	        "nickname": nickname
+        });
+        console.log(test);
     }
 
     return (
@@ -106,14 +141,20 @@ const SignUp = memo(() => {
                         onChange={onChnageNickname}
                         maxLength="10"
                     ></s.SignupInput>
-                    <s.SignupInput placeholder="이메일을 입력하세요" onChange={onChangeEmail}></s.SignupInput>
                     <s.SignupInput 
+                        style={{backgroundColor: emailCol}}
+                        placeholder="이메일을 입력하세요"
+                        onChange={onChangeEmail}
+                    ></s.SignupInput>
+                    <s.SignupInput 
+                        type= 'password'
                         style={{backgroundColor: passColor}}
                         placeholder="비밀번호를 입력하세요(영문, 숫자 사용 필수)"
                         maxLength='16'
                         onChange={onChangePassword}
                     ></s.SignupInput>
                     <s.SignupInput 
+                        type= 'password'
                         style={{backgroundColor: passColor}}
                         placeholder="비밀번호를 입력하세요(영문, 숫자 사용 필수)"
                         maxLength='16'
