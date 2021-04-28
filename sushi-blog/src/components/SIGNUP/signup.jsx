@@ -124,27 +124,21 @@ const SignUp = memo(() => {
         else{
             setEmailCol('#FFFFFF');
         }
-        try {
-            setLoading(true);
-            const {data} = await Request('post', '/account', {}, {
+        setLoading(true);
+        try{
+            const test = await Request('post', '/account', {}, {
                 "email": email,
                 "password": password,
                 "nickname": nickname
             });
-
-            console.log(data);
             setLoading(false);
             alert("회원가입이 완료되었습니다!");
-
-        } catch(err) {
-            setLoading(false);
-            console.log('asdasd');
-            alert(err);
-            console.log(err);
+            window.location.href = "/";
         }
-        
-        
-        //window.location.href = "/";
+        catch(e){
+            setLoading(false);
+            alert("이메일이나 닉네임이 중복되었습니다.");
+        }
     }
 
     return (
