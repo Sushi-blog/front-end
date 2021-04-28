@@ -1,6 +1,7 @@
 import React, {useState, memo} from 'react';
 import * as s from './styles';
 import { Request } from '../axios';
+import Loading from '../LOADING/Loading';
 
 const SignUp = memo(() => {
     const [nickname, setNickname] = useState('');
@@ -10,6 +11,7 @@ const SignUp = memo(() => {
     const [nicknameCol, setNicknameCol] = useState('#FFFFFF');
     const [emailCol, setEmailCol] = useState('#FFFFFF');
     const [passColor, setPassColor] = useState('#FFFFFF');
+    const [loading, setLoading] = useState(false);
 
     const special_pattern = /[`~!@#$%^&*|\\\'\";:\/?]/gi;
     const korea_pattern = /[\ㄱ-ㅎㅏ-ㅣ가-힣]/g;
@@ -122,16 +124,32 @@ const SignUp = memo(() => {
         else{
             setEmailCol('#FFFFFF');
         }
-        const test = await Request('post', '/account', null, {
-            "email": email,
-	        "password": password,
-	        "nickname": nickname
-        });
-        console.log(test);
+        try {
+            setLoading(true);
+            const {data} = await Request('post', '/account', {}, {
+                "email": email,
+                "password": password,
+                "nickname": nickname
+            });
+
+            console.log(data);
+            setLoading(false);
+            alert("회원가입이 완료되었습니다!");
+
+        } catch(err) {
+            setLoading(false);
+            console.log('asdasd');
+            alert(err);
+            console.log(err);
+        }
+        
+        
+        //window.location.href = "/";
     }
 
     return (
         <>
+            {loading ? <Loading></Loading> : null}
             <s.CenterContent>
                 <s.SignupContainer>
                     <s.TitleContainer>SIGN UP</s.TitleContainer>

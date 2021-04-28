@@ -39,6 +39,7 @@ export const SignupInput = styled.input`
     padding-left: 20px;
     border: none;
     border-radius: 10px;
+   
     &:nth-child(2) {
         margin-top: 46px;
     }

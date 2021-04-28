@@ -20,7 +20,7 @@ const Login = () => {
                     <p>Login</p>
                 </s.TitleContainer>
                 <s.LoginInput 
-                    placeholder="이메일을 입력히세요"
+                    placeholder="이메일을 입력하세요"
                     onChange={onChangeEmail}
                     value={email}
                 ></s.LoginInput>

@@ -10,7 +10,7 @@ export const Request = (method, url, head, data) => {
         data: data,
     }).then((e)=>{
         console.log(e);
-        return e.data;
+        return e;
     }).catch((err)=>{
         console.log(err);
         return err;
