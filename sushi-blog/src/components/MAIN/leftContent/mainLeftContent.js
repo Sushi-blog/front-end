@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import * as s from './styles';
 import CategoryFix from '../modals/categoryFix/categoryFix';
 import NicknameFix from '../modals/nicknameFix/nicknameFix';
@@ -13,6 +13,8 @@ const LeftCotent = () => {
         setCategoryFixModal(true);
         return;
     };
+
+    
 
     const ViewNicknameFixModal = () => {
         setNicknameFixModal(true);

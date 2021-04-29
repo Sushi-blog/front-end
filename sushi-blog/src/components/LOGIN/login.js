@@ -25,6 +25,7 @@ const Login = () => {
             });
             setLoading(false)
             localStorage.setItem("token", data["access-token"]);
+            localStorage.setItem("email", email);
             window.location.href= "/mainpage";
         } catch(e) {
             alert("이메일이나 비밀번호가 틀렸습니다.");
@@ -46,6 +47,7 @@ const Login = () => {
                         value={email}
                     ></s.LoginInput>
                     <s.LoginInput 
+                        type="password"
                         placeholder="비밀번호를 입력하세요"
                         onChange={onChangePassword}
                         value = {password}

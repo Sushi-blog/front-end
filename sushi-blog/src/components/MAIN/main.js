@@ -5,6 +5,7 @@ import MainRightContent from './rightContent/mainRightContent'
 
 
 const MainPage = () => {
+    
     return(
         <>
             <s.MainCotainer>
